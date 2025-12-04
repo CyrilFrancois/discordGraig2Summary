@@ -63,8 +63,10 @@ project/
 2. **Download the ZIP file** from Craig and place it into the `audio/` folder.
 3. **Run `audioToTranscript.py`** to generate a complete transcript.
 4. **Make sure `InfoGame/Context.txt` and `InfoGame/SummaryFromStory.txt` are up to date.**
-5. **Run `transcriptToSummary.py`** to create a cleaned, concise summary of the session.
+5. **Run `transcriptToSummary.py`** to create a cleaned, concise summary of the session (dont forget it need the two info file in `InfoGame/` and previous summary that could be empty in `summaries/`
 6. The final summary is stored in `summaries/`.
+
+Alternatively, you can just **Run `main.py`** to have both scripts executed instead of 3 to 5. 
 
 ---
 
@@ -72,7 +74,8 @@ project/
 
 * At least one previous summary must exist inside `summaries/` to maintain story continuity.
 * The more detailed the context files are, the better the generated summaries.
-* Transcription is fully local; only the summary generation requires the OpenAI API key.
+* Transcription is fully local; only the summary generation (`transcriptToSummary.py`) requires the OpenAI API key.
+* It means you can use the `audioToTranscript.py` to convert your Graig audio zip file into transcripts only.
 
 ---
 
