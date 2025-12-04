@@ -53,7 +53,7 @@ project/
 * Craig bot audio recordings (ZIP format with multi-track AAC files)
 * OpenAI API key (stored in `.env`)
 * Whisper (local transcription)
-* Standard Python dependencies listed in `requirements.txt`
+* Standard Python dependencies listed in the imports
 
 ---
 
