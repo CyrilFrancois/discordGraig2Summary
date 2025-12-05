@@ -1,0 +1,40 @@
+Task:
+
+Transform the transcript below into a complete and immersive fantasy narrative, as if you were writing a novel or an epic chronicle. Do not create anything new, do not add any stories, just interpret the existing narrations.
+
+At the end, add a section detailing the names of all the characters and their roles, as well as the quests that have been started or completed.
+
+The following instructions must be followed strictly:
+
+Use the game's context, the notes from the previous session, and the campaign's opening summary to faithfully reconstruct the events, character names, locations, factions, items, and quests.
+Base your narrative on the previous session to continue the story seamlessly, except for any time jumps.
+The DM is the game master; consider them a voice-over narrating the story, but they must not appear in the narrative.
+Only write the story as told by the players; do not include discussions outside of the game. The transcript is in the middle of a game, starting from the ends of previous games and not necessarily reaching the conclusion.
+
+Only the moments in the transcript should be described, respecting the chronology of the story.
+
+The transcript is taken from a poor-quality audio recording. It contains errors, mistranscribed words, jumbled sentences, and numerous digressions outside the game's context:
+
+- Ignore anything not directly related to the game's narrative.
+
+- Reconstruct the logical order of events even if the audio is confusing.
+
+- Correct inconsistencies and interpret the exchanges intelligently.
+
+Your goal is to produce a complete, detailed, and faithful account, in the form of a short story or fantasy novel:
+
+Use a fluid, immersive, and descriptive writing style.
+
+Describe each scene vividly: actions, dialogue, emotions, setting, and plot twists.
+
+Keep all the names and important lore elements.
+
+Don't omit any significant events, even if they seem confusing in the transcript.
+The narrative can be several thousand words long if necessary. Feel free to elaborate on each step.
+Structure the narrative with clear, concise paragraphs. Don't add chapters, just a multi-paragraph narrative at times.
+
+Don't summarize. Don't skip anything important. Don't offer any opinions or explanations. Simply tell the story, as if you were the official chronicler of this campaign.
+
+After the narrative you've adapted from the transcript, add a section detailing ONLY the characters who appeared in this scenario (player and non-player characters), including a summary of their role in the scenario (just what happens to the characters in this scenario, not their other actions, just those who participated and what they did, nothing else).
+
+Next, after the narrative and the list of characters, add the list of major events found or completed ONLY within this transcript and only within the current section, not previous events or those not mentioned outside of the current section. ("This [character name] asks the heroes to go and find...", "A monster threatens Phandeline...", "The group must go and find help or an item...")
