@@ -9,26 +9,17 @@ import sys
 from pydub import AudioSegment
 import torch
 import whisper
+import json
+from dotenv import load_dotenv
 
-AUDIO_DIR = "./audio"
-TRANSCRIPTS_DIR = "./transcripts"
-
-SPEAKER_MAP = {
-    "cyril0431#0": "Lugh",
-    "radblue#0": "DM",
-    "kami1876#0": "Ailouros",
-    "poulpikiller#0": "Lilie",
-    "klaonis#0": "Salazar"
-}
-
-
+load_dotenv()
 
 def log(msg):
     print(f"[LOG] {msg}")
 
 
 def get_most_recent_zip():
-    zips = glob.glob(os.path.join(AUDIO_DIR, "*.zip"))
+    zips = glob.glob(os.path.join(os.getenv("AUDIO_DIR"), "*.zip"))
     if not zips:
         return None
     return max(zips, key=os.path.getmtime)
@@ -78,8 +69,9 @@ def transcribe_audio_file(model, file_path):
     wav_path = file_path + ".wav"
     audio.export(wav_path, format="wav")
 
-    #TODO: result = model.transcribe(wav_path, verbose=False)
-    result = model.transcribe(wav_path, verbose=False, language="fr", task="transcribe")
+    #For autodetection of the language: result = model.transcribe(wav_path, verbose=False)
+    print(os.getenv("TARGET_LANG"))
+    result = model.transcribe(wav_path, verbose=False, language=os.getenv("TARGET_LANG"), task="transcribe")
     os.remove(wav_path)
 
     # Whisper outputs segments with timestamps; return timeline transcript.
@@ -94,15 +86,17 @@ def merge_transcripts(start_dt, by_speaker):
     for speaker, segments in by_speaker.items():
         txt_prev=''
         for (offset_sec, text) in segments:
-            timestamp = start_dt + datetime.timedelta(seconds=offset_sec)
             if(text!=txt_prev and text!="..." and text!=""):
-                merged.append(timestamp, speaker, text)
+                timestamp = start_dt + datetime.timedelta(seconds=offset_sec)
+                merged.append((timestamp, speaker, text))
             txt_prev=text
 
     merged.sort(key=lambda x: x[0])
 
     output_lines = []
     prev_line=''
+    SPEAKER_MAP = json.loads(os.getenv("SPEAKER_MAP"))
+    
     for ts, spk, line in merged:
         formatted_date = ts.strftime("%d/%m/%Y")
         formatted_time = f"{ts.hour:02d}h{ts.minute:02d}m{ts.second:02d}s"
@@ -113,7 +107,7 @@ def merge_transcripts(start_dt, by_speaker):
 
         if (line!="..." and line!="" and line!=prev_line):
             #output_lines.append(f"[{formatted_date}] {formatted_time} {spk} : {line}")
-            output_lines.append(f"[{spk} : {line}")
+            output_lines.append(f"{spk} : {line}")
         prev_line= line
 
     return "\n".join(output_lines)
@@ -177,11 +171,11 @@ def audioToTranscript():
         log("Merging transcripts chronologically...")
         final_text = merge_transcripts(start_dt, speaker_transcripts)
 
-        if not os.path.exists(TRANSCRIPTS_DIR):
-            os.makedirs(TRANSCRIPTS_DIR)
+        if not os.path.exists(os.getenv("TRANSCRIPTS_DIR")):
+            os.makedirs(os.getenv("TRANSCRIPTS_DIR"))
 
         output_name = start_dt.strftime("%Y%m%d_%H%M%S") + "_transcripts.txt"
-        output_path = os.path.join(TRANSCRIPTS_DIR, output_name)
+        output_path = os.path.join(os.getenv("TRANSCRIPTS_DIR"), output_name)
 
         log(f"Writing final transcript to {output_path}")
         with open(output_path, "w+", encoding="utf-8") as f:
