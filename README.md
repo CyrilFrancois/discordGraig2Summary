@@ -1,9 +1,11 @@
-# Craig RPG Audio Transcriber & Story Summarizer
+# [**Craig RPG Audio Transcriber & Story Summarizer**](https://github.com/CyrilFrancois/discordGraig2Summary)
 
 This project automates the entire pipeline for converting Discord roleplay recordings (from [**Craig**](https://craig.chat/)) into clean transcripts and narrative summaries.
 Drop a ZIP in the audio folder, run the script, and the system produces a structured, story-driven summary based on your own game context and custom instructions.
 
 The pipeline is fully customizable, language-aware, and supports personalized prompting for different narrative styles.
+
+**Tags:** python, rpg, automation, discord, summarization, transcription, whisper, llm, craig-bot
 
 ---
 ## Requirements
