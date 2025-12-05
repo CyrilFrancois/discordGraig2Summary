@@ -1,0 +1,9 @@
+Lugh : Hello everyone. Today I'm testing a new automated pipeline for role-play game sessions. The
+Lugh : goal is simple. Instead of taking manual notes during Discord sessions, we now record everything
+Lugh : with the Craig bot. After the session, Craig gives us a multi-track audio file. First script
+Lugh : in the pipeline called Audio Tutorune Script takes Craig's audio tracks, synchronize them
+Lugh : and produce a complete transcript of everything that was said. The second script, don't script
+Lugh : to summary, use that transcript and combine it with our game's context and the summary
+Lugh : of previous sessions. With the help of charge-gbt, it generates a clean narrative summary of the
+Lugh : adventure. This test audio is meant to verify that the transcription works correctly and
+Lugh : that the full pipeline produces a current summary. Have a nice game.
