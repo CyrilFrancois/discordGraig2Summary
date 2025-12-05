@@ -100,16 +100,16 @@ This file contains variables for two scripts. For the requirements, you only nee
 ```
 project/
 │
-├── 0.gameInfo/
+├── 0. gameInfo/
 │ ├── Context.txt # Worldbuilding, characters, rules, universe details
 │ ├── SummaryFromStory.txt # Recap of previous sessions (used as continuity context)
 │ └── prompt.txt # Customizable prompt sent to ChatGPT for summary generation
 │
-├── 1.audio/ # Craig ZIP audio files (only the most recent is processed)
+├── 1. audio/ # Craig ZIP audio files (only the most recent is processed)
 │
-├── 2.transcripts/ # Transcripts generated from the latest ZIP file
+├── 2. transcripts/ # Transcripts generated from the latest ZIP file
 │
-├── 3.summaries/ # Summaries generated from transcripts; last one also used as context
+├── 3. summaries/ # Summaries generated from transcripts; last one also used as context
 │
 ├── main.py # Main entry point of the pipeline
 ├── audioToTranscript.py # Converts Craig audio ZIP into a transcript
