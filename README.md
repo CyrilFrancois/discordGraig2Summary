@@ -27,6 +27,9 @@ python ./main.py
 
 1. **Record the session** using [**Craig**](https://craig.chat/) in Discord.  
 2. **Download the ZIP file (.AAC)** from Craig and place it into the `1. audio/` folder.
+<p align="left">
+  <img src="1. audio/whichCraigAudio.png" width="400">
+</p>
 4. **Run `audioToTranscript.py`** to generate a complete transcript.  
 5. **Ensure that `0. gameInfo/Context.txt` and `0. gameInfo/SummaryFromStory.txt` are up to date.**  
 6. **Run `transcriptToSummary.py`** to create a cleaned, concise summary (requires the game info files and optionally previous summaries in `3. summaries/`).  
@@ -34,11 +37,6 @@ python ./main.py
 
 Alternatively, you can just **run `main.py`** to execute both scripts automatically (3 to 5).
 
-<p align="center">
-  <img src="1. audio/whichCraigAudio.png" width="600">
-</p>
-
-![Pipeline overview]("1. audio/whichCraigAudio.png")
 ---
 
 ## Details
