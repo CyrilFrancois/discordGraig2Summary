@@ -16,7 +16,7 @@ The pipeline is fully customizable, language-aware, and supports personalized pr
   - `TARGET_LANG=fr` or `TARGET_LANG=en` (or any target language)
 - A properly filled `0. gameinfo/` folder with the three context files
 - 
-**I already set some example of game info files and an audio as an example, so you could also just run the code**
+**I’ve already provided example game info files and a sample audio recording, so you can simply run the code as-is.**
   
 And you're good to go :
 ```bash
