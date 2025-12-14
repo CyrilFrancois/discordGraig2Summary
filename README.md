@@ -26,13 +26,14 @@ python ./main.py
 ## How It Works
 
 1. **Record the session** using [**Craig**](https://craig.chat/) in Discord.  
-2. **Download the ZIP file (.AAC)** from Craig and place it into the `1. audio/` folder.  
-3. **Run `audioToTranscript.py`** to generate a complete transcript.  
-4. **Ensure that `0. gameInfo/Context.txt` and `0. gameInfo/SummaryFromStory.txt` are up to date.**  
-5. **Run `transcriptToSummary.py`** to create a cleaned, concise summary (requires the game info files and optionally previous summaries in `3. summaries/`).  
-6. The final summary is stored in `3. summaries/`.
+2. **Download the ZIP file (.AAC)** from Craig and place it into the `1. audio/` folder.
+![Pipeline overview]("1. audio/whichCraigAudio.png")
+4. **Run `audioToTranscript.py`** to generate a complete transcript.  
+5. **Ensure that `0. gameInfo/Context.txt` and `0. gameInfo/SummaryFromStory.txt` are up to date.**  
+6. **Run `transcriptToSummary.py`** to create a cleaned, concise summary (requires the game info files and optionally previous summaries in `3. summaries/`).  
+7. The final summary is stored in `3. summaries/`.
 
-Alternatively, you can just **run `main.py`** to execute both scripts automatically.
+Alternatively, you can just **run `main.py`** to execute both scripts automatically (3 to 5).
 
 ---
 
