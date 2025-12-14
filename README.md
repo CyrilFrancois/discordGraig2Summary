@@ -16,8 +16,8 @@ The pipeline is fully customizable, language-aware, and supports personalized pr
   - `TARGET_LANG=fr` or `TARGET_LANG=en` (or any target language)
   - `SPEAKER_MAP={"discordPseudo0#0": "DM", "discordPseudo1#0": "RPname1", "discordPseudo2#0": "RPname2",...}`
 - A properly filled `0. gameinfo/` folder with the three context files
-- 
-**-> I’ve already provided example game info files and a sample audio recording, so you can simply run the code as-is.**
+
+**-> I’ve already provided example game info files and a sample audio recording, so you can simply run the code as-is to try it.**
   
 And you're good to go :
 ```bash
