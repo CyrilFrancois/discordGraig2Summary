@@ -9,7 +9,7 @@ The pipeline is fully customizable, language-aware, and supports personalized pr
 
 ---
 ## Requirements
-- [Python 3.10+](https://www.python.org/downloads/) and dependancies (in the imports of both scripts: especially pydub, openai, ffmpeg (and add to PATH), use ```pip install [imported lib]```)
+- [Python 3.10+](https://www.python.org/downloads/) and dependancies (in the imports of both scripts: especially pydub, openai, ffmpeg (and add to PATH), use ```pip install [lib]```)
 - Your own [OpenAI/ChatGPT API key](https://platform.openai.com/docs/quickstart/step-2-set-up-your-api-key) (set in `.env`)
 - Mandatory environment variables in `.env`:
   - `OPENAI_API_KEY=...`
