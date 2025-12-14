@@ -1,7 +1,7 @@
 # [**Craig RPG Audio Transcriber & Story Summarizer**](https://github.com/CyrilFrancois/discordGraig2Summary)
 
 This project automates the entire pipeline for converting Discord roleplay recordings (from [**Craig**](https://craig.chat/)) into clean transcripts and narrative summaries.
-Drop a ZIP in the audio folder, run the script, and the system produces a structured, story-driven summary based on your own game context and custom instructions.
+Drop your donwloaded ZIP file (.AAC) in the audio folder, run the script, and the system produces a structured, story-driven summary based on your own game context and custom instructions.
 
 The pipeline is fully customizable, language-aware, and supports personalized prompting for different narrative styles.
 
@@ -26,7 +26,7 @@ python ./main.py
 ## How It Works
 
 1. **Record the session** using [**Craig**](https://craig.chat/) in Discord.  
-2. **Download the ZIP file** from Craig and place it into the `1. audio/` folder.  
+2. **Download the ZIP file (.AAC)** from Craig and place it into the `1. audio/` folder.  
 3. **Run `audioToTranscript.py`** to generate a complete transcript.  
 4. **Ensure that `0. gameInfo/Context.txt` and `0. gameInfo/SummaryFromStory.txt` are up to date.**  
 5. **Run `transcriptToSummary.py`** to create a cleaned, concise summary (requires the game info files and optionally previous summaries in `3. summaries/`).  
@@ -41,16 +41,16 @@ Alternatively, you can just **run `main.py`** to execute both scripts automatica
 ## `0. gameinfo/`
 The `0. gameinfo/` directory contains three key files that control the pipeline’s behavior.
 
-### 1. `Context.txt`
+### 1. `0. gameinfo/Context.txt`
 Write anything that describes the world, lore, characters, or general context of the game.  
 This file can be empty, but richer context makes translations and summaries far more accurate.
 
-### 2. `SummaryFromStory.txt`
+### 2. `0. gameinfo/SummaryFromStory.txt`
 A running recap of the story so far.  
 You should sometimes update it as the game progresses.  
 The pipeline uses this to maintain continuity and avoid contradictions.
 
-### 3. `Prompt.txt`
+### 3. `0. gameinfo/Prompt.txt`
 A prompt sent to ChatGPT to control how summaries and translations are generated.  
 This file must be written in the target language.  
 You can fully personalize style, tone, constraints, or narrative voice.
