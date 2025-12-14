@@ -14,9 +14,9 @@ The pipeline is fully customizable, language-aware, and supports personalized pr
 - Mandatory environment variables in `.env`:
   - `OPENAI_API_KEY=...`
   - `TARGET_LANG=fr` or `TARGET_LANG=en` (or any target language)
-- A properly filled `0. gameinfo/` folder with the three context file
+- A properly filled `0. gameinfo/` folder with the three context files
 
-And normally, you're good to go :
+And you're good to go :
 ```bash
 python ./main.py
 ```
@@ -27,13 +27,10 @@ python ./main.py
 
 1. **Record the session** using [**Craig**](https://craig.chat/) in Discord.  
 2. **Download the ZIP file (.AAC)** from Craig and place it into the `1. audio/` folder.
-<p align="left">
-  <img src="1. audio/whichCraigAudio.png" width="400">
-</p>
-4. **Run `audioToTranscript.py`** to generate a complete transcript.  
-5. **Ensure that `0. gameInfo/Context.txt` and `0. gameInfo/SummaryFromStory.txt` are up to date.**  
-6. **Run `transcriptToSummary.py`** to create a cleaned, concise summary (requires the game info files and optionally previous summaries in `3. summaries/`).  
-7. The final summary is stored in `3. summaries/`.
+3. **Run `audioToTranscript.py`** to generate a complete transcript.  
+4. **Ensure that `0. gameInfo/Context.txt` and `0. gameInfo/SummaryFromStory.txt` are up to date.**  
+5. **Run `transcriptToSummary.py`** to create a cleaned, concise summary (requires the game info files and optionally previous summaries in `3. summaries/`).  
+6. The final summary is stored in `3. summaries/`.
 
 Alternatively, you can just **run `main.py`** to execute both scripts automatically (3 to 5).
 
@@ -67,6 +64,10 @@ This flexibility lets you customize the pipeline to get the exact narrative styl
 
 ## `1. audio/`
 Drop the .AAC zip files you get from [Craig](https://craig.chat/) here. Only the most recently added ZIP file will be processed by the pipeline.
+
+<p align="left">
+  <img src="1. audio/whichCraigAudio.png" width="400">
+</p>
 
 ## `2. transcripts/`
 This folder stores all generated transcripts. Each time you place a new ZIP file into `1. audio/`, the script overwrites the previous transcript with a new one based on the latest recording.
