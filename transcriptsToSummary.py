@@ -29,9 +29,10 @@ def transcriptsToSummary():
     if not files:
         print ("WARNING: no previously in " + os.getenv("SUMMARIES_FOLDER"))
         previously = "No previously yet. Just use the transcript, considering this is the start of adventure."
-    else:
+    else: 
         with open(max(files, key=os.path.getmtime), 'r', encoding='utf-8') as file:
             previously = file.read()
+            #print(previously)
 
     #var: lasttranscripts
     files = glob.glob(os.path.join(os.getenv("TRANSCRIPTS_DIR"), "*"))
@@ -41,7 +42,10 @@ def transcriptsToSummary():
     else:
         with open(max(files, key=os.path.getmtime), 'r', encoding='utf-8') as file:
             #var: ouput_name
-            output_name = os.getenv("SUMMARIES_FOLDER") + file.name.split("\\")[-1][:15]+"_summary.txt"
+            base_filename = os.path.basename(file.name)
+            short_name = base_filename[:15]
+            output_name = os.path.join(os.getenv("SUMMARIES_FOLDER"), f"{short_name}_summary.txt")
+            #output_name = os.getenv("SUMMARIES_FOLDER") + file.name.split("\\")[-1][:15]+"_summary.txt"
             lasttranscripts = file.read()
 
     with open(os.getenv("PROMPT"), 'r', encoding='utf-8') as file:
